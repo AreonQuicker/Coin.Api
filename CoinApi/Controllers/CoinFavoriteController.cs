@@ -49,7 +49,7 @@ namespace CoinApi.Controllers
         }
 
         /// <summary>
-        /// Create favorite coin
+        /// Create coin favorite
         /// </summary>
         /// <param name="request">Create request</param>
         /// <returns>Created Id</returns>
@@ -65,7 +65,7 @@ namespace CoinApi.Controllers
         }
 
         /// <summary>
-        /// Update coin currencies by symbol
+        /// Update coin favorite by symbol
         /// </summary>
         /// <param name="symbol">Symbol</param>
         /// <param name="request">Update request</param>

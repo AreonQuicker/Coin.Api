@@ -147,9 +147,6 @@ namespace CoinApi.Domain.Logic.CoinFavorite.Services
                 coinFavorite.FavoriteCurrencies.Remove(coinFavoriteFavoriteCurrency);
             }
 
-            // _dataContext.CurrencyFavorites.RemoveRange(coinFavorite.FavoriteCurrencies);
-            // await _dataContext.SaveChangesAsync();
-
             _mapper.Map(coinFavoriteUpdateRequest, coinFavorite);
             _dataContext.Entry(coinFavorite).State = EntityState.Modified;
 

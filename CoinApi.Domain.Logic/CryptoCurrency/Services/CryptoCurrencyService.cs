@@ -101,16 +101,10 @@ namespace CoinApi.Domain.Logic.CryptoCurrency.Services
                     {
                         entry.Quotes.Remove(entryQuote);
                     }
-                    
-                    // _dataContext.CryptoCurrencyQuotes.RemoveRange(entry.Quotes);
-                    //
-                    // await _dataContext.SaveChangesAsync();
 
                     _mapper.Map(cryptoCurrencyUpsertRequest, entry);
                     _dataContext.Entry(entry).State = EntityState.Modified;
-
-                    // await _dataContext.SaveChangesAsync();
-
+                
                     return;
                 }
 
