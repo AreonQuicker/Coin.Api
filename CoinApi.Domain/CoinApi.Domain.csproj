@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="11.0.1"/>
+        <PackageReference Include="E.S.Api.Helpers" Version="1.0.4"/>
+        <PackageReference Include="E.S.ApiClientHandler" Version="1.0.9"/>
+        <PackageReference Include="E.S.Logging" Version="1.0.7"/>
+        <PackageReference Include="FluentValidation" Version="10.3.6"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.2"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
+        <PackageReference Include="Polly" Version="7.2.3"/>
+        <PackageReference Include="Scrutor" Version="4.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\CoinApi.Domain.Models\CoinApi.Domain.Models.csproj"/>
+    </ItemGroup>
+
+</Project>

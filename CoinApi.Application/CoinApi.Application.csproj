@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\CoinApi.Application.Core\CoinApi.Application.Core.csproj" />
+        <ProjectReference Include="..\CoinApi.Background.Queue.Core\CoinApi.Background.Queue.Core.csproj" />
+        <ProjectReference Include="..\CoinApi.Domain\CoinApi.Domain.csproj" />
+        <ProjectReference Include="..\CoinApi.Integration.Core\CoinApi.Integration.Core.csproj" />
+    </ItemGroup>
+
+</Project>

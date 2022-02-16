@@ -1,0 +1,15 @@
+.vs
+.idea/*
+.idea/.idea.Starter/*
+!.idea/.idea.Starter/.idea
+
+.idea/.idea.Starter/.idea/*
+!.idea/.idea.Starter/.idea/runConfigurations
+!.idea/.idea.Starter/.idea/indexLayout.xml
+!.idea/.idea.Starter/.idea/vcs.xml
+
+**/bin
+**/obj
+**/.vs
+*.user
+/global.json
