@@ -6,7 +6,7 @@ This API application will be used to sync all rates from *CoinMarketCap* in a lo
 
 The rates will be synced in a frequency of 10 min (Can be configured)
 
-The following systems will be synced
+The following entities will be synced
 - Coins
 - Currencies
 - Cryptocurrencies (Only if it has been favorited)
