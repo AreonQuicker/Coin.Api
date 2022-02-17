@@ -38,6 +38,7 @@ namespace CoinApi.Application.CryptoCurrency.Queries
                 _getPaginatedCryptoCurrenciesFluentService
                     .WithSymbol(request.Symbol)
                     .WithPaginatedInfo((request.PageNumber, request.PageSize))
+                    .WithSortInfo(new SortInfo(request.SortKey, request.SortType))
                     .GetAsync();
         }
 

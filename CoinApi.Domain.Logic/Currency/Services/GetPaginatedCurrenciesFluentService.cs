@@ -36,9 +36,9 @@ namespace CoinApi.Domain.Logic.Currency.Services
             if (_symbol != null)
                 data = data.Where(w => w.Symbol == _symbol);
 
-            data = data.OrderBy(o => o.Symbol);
-
             return data;
         }
+
+        protected override string DefaultSortKey => "Symbol";
     }
 }

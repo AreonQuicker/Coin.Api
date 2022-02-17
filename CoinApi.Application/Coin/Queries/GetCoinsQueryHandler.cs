@@ -28,6 +28,7 @@ namespace CoinApi.Application.Coin.Queries
                     .WithRank(request.Rank)
                     .WithSymbol(request.Symbol)
                     .WithPaginatedInfo((request.PageNumber, request.PageSize))
+                    .WithSortInfo(new SortInfo(request.SortKey, request.SortType))
                     .GetAsync();
         }
     }

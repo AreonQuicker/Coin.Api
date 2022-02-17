@@ -20,5 +20,12 @@ namespace CoinApi.Domain.Common.Interfaces
         /// </summary>
         /// <returns></returns>
         Task<PaginatedList<T>> GetAsync();
+
+        /// <summary>
+        /// Specify the sort criteria
+        /// </summary>  
+        /// <param name="SortInfo">Sort Info</param>
+        /// <returns></returns>
+        IFluentGetPaginatedService<T> WithSortInfo(SortInfo sortInfo);
     }
 }

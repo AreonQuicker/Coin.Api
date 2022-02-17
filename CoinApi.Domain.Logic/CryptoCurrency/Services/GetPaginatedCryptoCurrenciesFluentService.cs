@@ -9,8 +9,8 @@ using CoinApi.Domain.Models.DomainModels;
 namespace CoinApi.Domain.Logic.CryptoCurrency.Services
 {
     /// <summary>
-    /// Get paginated list of crypto rates
-    /// Fluent builder service be used
+    ///     Get paginated list of crypto rates
+    ///     Fluent builder service be used
     /// </summary>
     public class GetPaginatedCryptoCurrenciesFluentService :
         FluentGetPaginatedServiceBase<CryptoCurrencyResult, CryptoCurrencyDomainModel>,
@@ -24,13 +24,12 @@ namespace CoinApi.Domain.Logic.CryptoCurrency.Services
         {
             _dataContext = dataContext;
         }
-        
+
         /// <summary>
-        /// Specify the symbol to be used to get the results
+        ///     Specify the symbol to be used to get the results
         /// </summary>
         /// <param name="symbol">Symbol</param>
         /// <returns></returns>
-
         public IGetPaginatedCryptoCurrenciesFluentService WithSymbol(string symbol)
         {
             _symbol = symbol;
@@ -46,9 +45,9 @@ namespace CoinApi.Domain.Logic.CryptoCurrency.Services
             if (_symbol != null)
                 data = data.Where(w => w.Symbol == _symbol);
 
-            data = data.OrderBy(o => o.CmcRank);
-
             return data;
         }
+
+        protected override string DefaultSortKey => "Symbol";
     }
 }

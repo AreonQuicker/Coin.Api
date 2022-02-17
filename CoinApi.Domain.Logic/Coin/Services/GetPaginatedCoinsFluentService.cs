@@ -9,8 +9,8 @@ using CoinApi.Domain.Models.DomainModels;
 namespace CoinApi.Domain.Logic.Coin.Services
 {
     /// <summary>
-    /// Get paginated list of coins
-    /// Fluent builder service be used
+    ///     Get paginated list of coins
+    ///     Fluent builder service be used
     /// </summary>
     public class GetPaginatedCoinsFluentService : FluentGetPaginatedServiceBase<CoinResult, CoinDomainModel>,
         IGetPaginatedCoinsFluentService
@@ -26,7 +26,7 @@ namespace CoinApi.Domain.Logic.Coin.Services
         }
 
         /// <summary>
-        /// Specify the rank to be used to get the results
+        ///     Specify the rank to be used to get the results
         /// </summary>
         /// <param name="rank">Rank</param>
         /// <returns></returns>
@@ -38,7 +38,7 @@ namespace CoinApi.Domain.Logic.Coin.Services
         }
 
         /// <summary>
-        /// Specify the symbol to be used to get the results
+        ///     Specify the symbol to be used to get the results
         /// </summary>
         /// <param name="symbol">Symbol</param>
         /// <returns></returns>
@@ -59,10 +59,10 @@ namespace CoinApi.Domain.Logic.Coin.Services
 
             if (_symbol != null)
                 data = data.Where(w => w.Symbol == _symbol);
-
-            data = data.OrderBy(o => o.Symbol);
-
+            
             return data;
         }
+
+        protected override string DefaultSortKey => "Symbol";
     }
 }
